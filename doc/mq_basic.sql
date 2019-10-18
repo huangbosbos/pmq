@@ -159,7 +159,7 @@ CREATE TABLE `db_node` (
   `port_bak` smallint(11) DEFAULT NULL COMMENT '读写分离',
   `db_user_name_bak` varchar(100) DEFAULT NULL COMMENT '读写分离',
   `db_pass_bak` varchar(100) DEFAULT NULL COMMENT '读写分离',
-  `con_str` varchar(500) NOT NULL COMMENT '数据库链接字符串',
+  `con_str` varchar(64) NOT NULL COMMENT '数据库链接字符串',
   `read_only` tinyint(4) DEFAULT '1' COMMENT '读写状态： 1读写 2只读 3不可读不可写',
   `node_type` tinyint(4) DEFAULT '1' COMMENT '1,表示存储正常队列消息，2，表示存储失败队列消息',
   `normal_flag` tinyint(4) DEFAULT '1' COMMENT '所有topic自动分配的节点 全部分配到普通节点上，只有手动分配的时候可以分配到特殊节点。1，表示普通节点，0，表示特殊节点',
